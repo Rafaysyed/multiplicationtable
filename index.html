@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascipt Practice</title>
+    <!-- <style>
+      h1 {
+        display: inline;
+      }
+    </style> -->
+  </head>
+  <body>
+    <h1 id="intro">Generate Multiplication Table</h1>
+    <form>
+      <label>Enter Number To Calculate:</label>
+      <input
+        type="text"
+        id="num1"
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+      />
+      <br /><br />
+      <label>Enter Range</label>
+      <input
+        type="text"
+        id="num2"
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+      />
+      <br /><br />
+      <button type="submit" onclick="calculate();this.disabled=true">
+        calculate
+      </button>
+      <button type="submit" onclick="location.reload()" id="cal" disabled>
+        Calculate Again
+      </button>
+    </form>
+    <h1 id="result"></h1>
+
+    <script src="index.js"></script>
+  </body>
+</html>
